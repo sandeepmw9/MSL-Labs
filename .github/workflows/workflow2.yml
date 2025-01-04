@@ -8,3 +8,7 @@ jobs:
       - run: echo "Nice work, $First_Name. Deploying to production server on branch $GITHUB_REF"
         env:
           First_Name: Sandeep
+
+
+#using custom env variables, when using custom env variables within runner, use env: attribut to the step and pass the env variable 
+# eg First_Name
