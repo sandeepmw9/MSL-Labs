@@ -1,4 +1,4 @@
-name: CI2
+name: workflow3
 on: workflow_dispatch
 jobs:
   prod-check:
