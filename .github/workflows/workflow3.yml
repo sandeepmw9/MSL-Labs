@@ -1,0 +1,16 @@
+name: CI2
+on: workflow_dispatch
+jobs:
+  prod-check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Nice work, $First_Name. Deploying to production server on branch $GITHUB_REF"
+        env:
+          First_Name: Sandeep
+
+      - name: example running script
+        run: ./.github/scripts/sample.sh
+        shell: bash
+
+# example of running a sceipt
