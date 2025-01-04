@@ -2,7 +2,10 @@ name: CI
 on: workflow_dispatch
 jobs:
   prod-check:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' 
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploying to production server on branch $GITHUB_REF"
+
+#here github.ref is referring to context env variable but GITHUB_REF is referring to env variable within the runner.
+#github.ref is the context env variable while GITHUB_REF is default env variable.
