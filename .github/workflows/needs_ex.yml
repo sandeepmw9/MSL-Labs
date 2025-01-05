@@ -1,4 +1,4 @@
-name: Build and deploy
+name: needs_ex
 on: workflow_dispatch
 
 jobs:
