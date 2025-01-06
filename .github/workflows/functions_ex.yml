@@ -1,0 +1,9 @@
+name: functions_ex
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: contains test
+      if: contains('sandeep mishra', 'ee')
+      run: echo "name is sandeep"
