@@ -7,3 +7,10 @@ jobs:
     - name: contains test
       if: contains('sandeep mishra', 'ee')
       run: echo "name is sandeep"
+    - name: startswith test
+      if: startsWith('sandeep mishra', 'sa')
+      run: echo "name is sandeep"
+    - name: endswith test
+      if: endsWith('sandeep mishra', 'ra')
+      run: echo "name is sandeep"
+
