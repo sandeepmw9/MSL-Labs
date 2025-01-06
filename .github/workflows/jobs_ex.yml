@@ -1,0 +1,23 @@
+name: jobs_ex
+on: 
+  workflow_call:
+    outputs:
+        output1:
+            description: first output
+            value: ${{ jobs.example_job1.outputs.value1}}
+        output2:
+            description: second output
+            value: ${{ jobs.example_job1.outputs.value2}} 
+
+
+jobs:
+    example_job1:
+        runs-on: ubuntu-latest
+        outputs:
+            value1: ${{ steps.step1.outputs.output1 }}
+            value2: ${{ steps.step2.outputs.output2 }}
+        steps:
+          - id: step1
+            run: echo "output1=sandeep" >> $GITHUB_OUTPUT
+          - id: step2
+            run: echo "output2=mishra" >> $GITHUB_OUTPUT
