@@ -7,10 +7,29 @@ jobs:
     - name: contains test
       if: contains('sandeep mishra', 'ee')
       run: echo "name is sandeep"
+
     - name: startswith test
       if: startsWith('sandeep mishra', 'sa')
       run: echo "name is sandeep"
+
     - name: endswith test
       if: endsWith('sandeep mishra', 'ra')
       run: echo "name is sandeep"
+
+    - name: success test
+      if: ${{ success() }}
+      run: echo "i will run when all previous steps are succedded"
+
+    - name: failure test
+      if: ${{ failure() }}
+      run: echo "i will run if any of previous steps have failed"
+
+    - name: cancelled test
+      if: ${{ cancelled() }}
+      run: echo "i will run when cancelled"
+
+    - name: always test
+      if: ${{ always() }}
+      run: echo "i will always run"
+
 
