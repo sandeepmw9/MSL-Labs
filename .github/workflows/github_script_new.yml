@@ -8,15 +8,15 @@ jobs:
     steps:
     - uses: actions/github-script@0.8.0
       with:
-        github-token: ${{secrets.GIT_T}}
+        github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-            github.issues.createComment({
+            github.rest.issues.createComment({
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
             body: "🎉 You've created this issue comment using GitHub Script!!!"
             })
-            github.projects.createCard({
+            github.rest.projects.createCard({
             column_id: {{columnID}},
             content_id: context.payload.issue.id,
             content_type: "Issue"
