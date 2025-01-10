@@ -1,0 +1,8 @@
+name: access github token
+on: push
+jobs:
+    access_github_token:
+        runs-on: ubuntu-latest
+        steps:
+          - name: access_github_token
+            run: echo ${{github.token}}
