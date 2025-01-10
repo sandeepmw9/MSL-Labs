@@ -5,4 +5,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - name: access_github_token
-            run: echo ${{github.token}}
+            run: echo ${{secrets.GITHUB_TOKEN}}
