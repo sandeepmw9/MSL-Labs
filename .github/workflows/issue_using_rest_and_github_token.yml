@@ -1,6 +1,6 @@
 name: issue_using_rest_and_github_token
 
-on: [ push ]
+on: [ workflow_dispatch ]
 
 jobs:
   create_issue:

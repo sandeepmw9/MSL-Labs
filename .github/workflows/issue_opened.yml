@@ -1,0 +1,30 @@
+# name: event_types_&_filters
+# on:
+#   issues:
+#     types:
+#       - opened
+#       - closed
+#   issue_comment:
+#     types:
+#       - created
+#       - edited
+#       - deleted
+#   label:
+#     types:
+#       - created
+#       - edited
+#       - deleted
+#   push:
+#     branches:
+#       - main
+#   page_build:
+
+#   pull_request:
+#     branches-ignore: 
+#         - br1
+#         - br2
+# jobs:
+
+
+
+    

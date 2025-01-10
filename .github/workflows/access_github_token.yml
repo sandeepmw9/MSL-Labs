@@ -1,5 +1,5 @@
 name: access github token
-on: push
+on: workflow_dispatch
 jobs:
     access_github_token:
         runs-on: ubuntu-latest
