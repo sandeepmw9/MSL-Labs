@@ -1,0 +1,10 @@
+name: refcheck
+on: push
+jobs:
+  ref_check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.ref_name }}
+      - run: echo ${{ github.ref }}
+      - run: echo ${{ github.sha }}
+      - run: echo ${{ github.server_url }}
